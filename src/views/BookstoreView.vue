@@ -73,7 +73,6 @@ span {
     float: right;
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
     justify-content: center;
     margin-left: 5%;
 }
@@ -84,8 +83,7 @@ span {
     width: 100%;
     padding: 15%;
     border: none;
-    background-color: ##008000;
-    /* background-image: url("../src/assets/img/carrinho.png"); */
+    background-color: #91e491;
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;

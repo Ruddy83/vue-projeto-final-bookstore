@@ -42,16 +42,16 @@ export default {
     <div class="item1">
         <table>
             <tr>
-                <th class="book">Book</th>
-                <th>Valor</th>
+                <th class="book">Título</th>
+                <th>Editora</th>
                 <th class="quant">Excluir</th>
             </tr>
             <tr v-for="carrinhoItem in carrinho" :key="carrinhoItem.id" class="item">
                 <td>{{ carrinhoItem.title }}</td>
-                <td>{{ carrinhoItem.published }}</td>
+                <td>{{ carrinhoItem.publisher }}</td>
                 <td class="quant">
                     <figure @click="removeFromCarrinho(carrinhoItem.id)" class="btn-remove">
-                        <img src="../assets/img/deletar.png" alt="" class="addDelCarrinho" />
+                        <button class="addDelCarrinho" @click="del()">X</button> 
                     </figure>
                 </td>
             </tr>
@@ -63,7 +63,7 @@ export default {
 
 <style>
 body {
-  background-color: #d9d9d9;
+  background-color: whitesmoke;
   margin: 0;
 }
 ul {
@@ -140,66 +140,9 @@ th {
 }
 .posicao {
   width: 5%;
+
 }
-.info {
-  width: 80%;
-  border-style: none;
-  height: 5%;
-  float: left;
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-top: 5%;
-  margin-bottom: 5%;
-  border-radius: 5px;
-}
-.optional {
-  width: 80%;
-  border-style: none;
-  height: 15%;
-  float: left;
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-top: 5%;
-  margin-bottom: 5%;
-  border-radius: 5px;
-}
-.sectionName {
-  margin: 0;
-  color: white;
-  height: 1%;
-  height: 100%;
-  width: 100%;
-  margin-top: 5%;
-}
-.inputName {
-  margin: 1px;
-  font-size: 12px;
-  height: 2%;
-  margin-left: 10%;
-}
-.inputSection {
-  width: 100%;
-  height: 100%;
-  margin-top: 5%;
-}
-.inputSectionName {
-  width: 100%;
-  background-color: #373337;
-  height: 10%;
-  text-align: center;
-  display: flex;
-}
-.paymentCamp {
-  width: 80%;
-  height: 5%;
-  font-size: 18px;
-  margin-top: 5%;
-  background-color: #d9d9d9;
-  margin-left: 10%;
-  padding-top: 2%;
-  text-align: center;
-  border-radius: 5px;
-}
+
 span {
   width: 100%;
 }
@@ -219,10 +162,11 @@ span {
 }
 .quant {
   text-align-last: center;
-  width: 15%;
+  width: 25%;
 }
 .btn-remove {
     cursor: pointer;
+    background-color: darkred;
 }
 .dropdown {
   position: relative;
@@ -241,38 +185,7 @@ span {
 .dropdown:hover .dropdown-content {
   display: block;
 }
-.infoDrop {
-  width: 80%;
-  border-style: none;
-  height: 20px;
-  margin-left: 5%;
-  margin-right: 5%;
-  margin-top: 2px;
-  border-radius: 5px;
-  background-color: white;
-  border: solid black 1px;
-}
-.infoDropNum {
-  width: 32%;
-  border-style: none;
-  height: 20px;
-  margin-top: 2px;
-  border-radius: 5px;
-  background-color: white;
-  border: solid black 1px;
-}
-.inputNameDropdown {
-  margin: 0;
-  font-size: 14px;
-}
-.cvvValidade {
-  display: flex;
-  text-align: center;
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-top: 5px;
-  width: 80%;
-}
+
 .endButton {
   width: 80%;
   height: 5%;
@@ -284,6 +197,6 @@ span {
   color: white;
 }
 .endButton:hover {
-  background-color: #7c90a0;
+  background-color: #008000;
 }
 </style>
