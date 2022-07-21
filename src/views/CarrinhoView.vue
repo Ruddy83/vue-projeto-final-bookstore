@@ -35,7 +35,31 @@ export default {
 }
 </script>
 
-
+<template>
+  <section class="container">
+    
+    
+    <div class="item1">
+        <table>
+            <tr>
+                <th class="book">Book</th>
+                <th>Valor</th>
+                <th class="quant">Excluir</th>
+            </tr>
+            <tr v-for="carrinhoItem in carrinho" :key="carrinhoItem.id" class="item">
+                <td>{{ carrinhoItem.title }}</td>
+                <td>{{ carrinhoItem.published }}</td>
+                <td class="quant">
+                    <figure @click="removeFromCarrinho(carrinhoItem.id)" class="btn-remove">
+                        <img src="../assets/img/deletar.png" alt="" class="addDelCarrinho" />
+                    </figure>
+                </td>
+            </tr>
+        </table>
+      <button class="endButton" @click="finishPurchase()">Finalizar</button>
+    </div>
+  </section>
+</template>
 
 <style>
 body {

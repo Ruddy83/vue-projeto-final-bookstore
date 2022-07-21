@@ -38,7 +38,7 @@ export default {
             </div>
             <div class="description">
                 <h3>{{ bookstoreItem.title }}</h3>
-                <h5> <span>R$</span> {{ bookstoreItem.publisher.description }}</h5>
+                <h5> <span>Editora</span> {{ bookstoreItem.publisher.description }}</h5>
             </div>
             <div class="actions">
                 <button @click="addToCarrinho(bookstoreItem)" class="add-cart-button">Adicionar ao Carrinho</button>
@@ -57,7 +57,7 @@ export default {
 }
 .item {
     margin: 25px;
-    background-color: #868585;
+    background-color: #2596be;
     text-align: center;
     font-size: 1.5em;
     width: 46.5%;
@@ -84,7 +84,7 @@ span {
     width: 100%;
     padding: 15%;
     border: none;
-    background-color: #7c90a0;
+    background-color: ##008000;
     /* background-image: url("../src/assets/img/carrinho.png"); */
     background-position: center;
     background-size: contain;
